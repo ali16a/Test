@@ -1,0 +1,109 @@
+# Writing a basic HTML structure for the requested website.
+
+html_content = """
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استخر کوثر فیروزآباد</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+        header {
+            background-color: #0078d4;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            text-align: center;
+            margin: 1em 0;
+        }
+        nav a {
+            margin: 0 1em;
+            text-decoration: none;
+            color: #0078d4;
+            font-weight: bold;
+        }
+        section {
+            margin: 2em;
+            padding: 1em;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #0078d4;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>به استخر کوثر فیروزآباد خوش آمدید</h1>
+    <p>فروش آنلاین بلیط استخر - فقط ۵۵ هزار تومان به ازای هر سانس</p>
+</header>
+
+<nav>
+    <a href="#about">درباره ما</a>
+    <a href="#tickets">رزرو بلیط</a>
+    <a href="#contact">تماس با ما</a>
+    <a href="#faq">سوالات متداول</a>
+</nav>
+
+<section id="about">
+    <h2>درباره استخر کوثر</h2>
+    <p>استخر کوثر فیروزآباد با ارائه خدمات عالی و محیطی آرامش‌بخش، آماده پذیرایی از شماست. سانس‌ها از ساعت ۱۳:۳۰ تا ۲۲:۰۰ برگزار می‌شوند و هر سانس ۹۰ دقیقه زمان دارد.</p>
+</section>
+
+<section id="tickets">
+    <h2>رزرو بلیط</h2>
+    <form action="/reserve" method="post">
+        <label for="date">تاریخ:</label>
+        <input type="date" id="date" name="date" required><br><br>
+        <label for="time">ساعت:</label>
+        <select id="time" name="time" required>
+            <option value="13:30">13:30</option>
+            <option value="15:00">15:00</option>
+            <option value="16:30">16:30</option>
+            <option value="18:00">18:00</option>
+            <option value="19:30">19:30</option>
+            <option value="21:00">21:00</option>
+        </select><br><br>
+        <button type="submit">رزرو کن</button>
+    </form>
+</section>
+
+<section id="contact">
+    <h2>تماس با ما</h2>
+    <p>شماره تماس: ۰۹۱۷۱۸۹۰۳۴۴</p>
+</section>
+
+<section id="faq">
+    <h2>سوالات متداول</h2>
+    <p>لطفاً وسایل شنا خود را به همراه داشته باشید. ورود کودکان زیر ۸ سال بدون همراهی والدین ممنوع است.</p>
+</section>
+
+<footer>
+    <p>تمامی حقوق محفوظ است - استخر کوثر فیروزآباد</p>
+</footer>
+
+</body>
+</html>
+"""
+
+# Saving the HTML content to a file.
+file_path = "/mnt/data/estakhr_kowsar.html"
+with open(file_path, "w", encoding="utf-8") as file:
+    file.write(html_content)
+
+file_path
